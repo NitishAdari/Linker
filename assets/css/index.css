@@ -1,0 +1,26 @@
+img {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
+}
+
+.hmm{
+    width: 100%;
+}
+
+.hed{
+    display: flex;
+    flex-wrap: wrap;
+    flex-basis: content;
+}
+.item {
+    width: 120px;
+    min-height: 50px;
+    max-height: 100%;
+    border-style: solid;
+    border-color: black;
+    background-color: aqua;
+    float: left;
+    margin: 3px;
+    padding: 3px;
+}

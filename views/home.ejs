@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title><%= title %></title>
+    <script src="https://kit.fontawesome.com/cbf57ead5a.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="/css/index.css">
+</head>
+<body>
+    <div>
+        <h1><i class="fas fa-eur"></i>List of Contacts</h1>
+    </div>
+
+    <form action="/create" method="post">
+        <input type="text" name="name" placeholder="Ur Name">
+        <input type="text" name="link" placeholder="Ur Link">
+        <button type="submit">Create</button>
+    </form>
+
+    <ol>
+        <div class="hed">
+        <% for(let i of contact_list){ %>
+            <a href="intoit/?name=<%= i.name %>" >
+                    <div class="item">
+                        <!-- <a href="intoit/?name=<%= i.name %>" > -->
+                            <p><%= i.name %></p>
+                            <img src = "<%= i.soc %>">
+                            <a href="delete/?name=<%=i.name%>">
+                                <p>delete</p>
+                            </a>
+                            <a href="modify/?name=<%=i.name%>">
+                                <p>modify</p>
+                            </a>
+                        <!-- </a> -->
+                    </div>
+                </a>
+        <%}%>
+    </div>
+    </ol>
+    <script type="javascript" src="/js/index.js"></script>
+</body>
+</html>
